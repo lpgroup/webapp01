@@ -16,7 +16,7 @@ st.subheader("Sub Cabeçalho")
 # Use st.write("") para adicionar um texto ao seu Web app
 st.write("Como já deve ter percebido, o método st.write() é usado para escrita de texto e informações gerais!")
 
-st.subheader("------ **Desenvolvido por: Massaki de O. Igarashi** -----")
+st.subheader("|**Desenvolvido por: Massaki de O. Igarashi** -----")
 
 menu = ["Texto_Colunas",
         "Texto_Markdown",
