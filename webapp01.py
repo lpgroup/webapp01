@@ -3,9 +3,9 @@ from PIL import Image
 #https://medium.com/pythoneers/word-cloud-app-with-streamlit-framework-in-python-4b9b440d485
 import streamlit as st
 import pandas as pd
+
+from io import BytesIO
 import requests
-!pip install "bs4"
-from bs4 import BeautifulSoup
 import re
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
@@ -30,7 +30,7 @@ words = st.sidebar.selectbox("No. of words", range(10, 1000, 10))
 if URL is not None:
     r = requests.get(URL)
     #using the web scraping library that is Beautiful Soup
-    soup = BeautifulSoup(r.content, 'html.parser')
+    soup = r.content
     #extracting the data that is in 'div' content of HTML page
     table = soup.find('div', attrs = {'id':'main-content'})
     text = table.text
