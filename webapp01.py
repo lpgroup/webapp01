@@ -4,7 +4,7 @@ from PIL import Image
 import streamlit as st
 import pandas as pd
 import requests
-!python3 -m pip install "bs4"
+!pip install "bs4"
 from bs4 import BeautifulSoup
 import re
 from wordcloud import WordCloud, STOPWORDS
